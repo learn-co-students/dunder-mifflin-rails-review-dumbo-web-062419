@@ -1,0 +1,8 @@
+<h2>Edit this dog</h2>
+<%= form_with model: @dog do |dog| %>
+<%= dog.label :name %>
+<%= dog.text_field :name %>
+<%= dog.label :breed %>
+<%= dog.text_field :breed %>
+<%= dog.submit %>
+<% end %>
