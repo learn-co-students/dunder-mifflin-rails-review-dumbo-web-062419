@@ -1,0 +1,17 @@
+<h1>Viewing <%= @dog.name %></h1>
+<p>
+  <%= link_to "Go back", dogs_path %> |
+  <%= link_to "Edit #{@dog.name}", edit_dog_path(@dog) %>
+</p>
+<hr>
+
+<p>Name: <%= @dog.name %></p>
+<p>Breed: <%= @dog.breed %></p>
+<p>Age: <%= @dog.age %></p>
+<p>Employees:
+  <ul>
+    <% @employees.each do |emp| %>
+    <li><%= emp.first_name + " " + emp.last_name%></li>
+    <% end %>
+  </ul>
+</p>
