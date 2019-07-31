@@ -1,5 +1,15 @@
 <h1>Create a New instance of an Employee</h1>
 
+<% if flash[:errors] %>
+<ul>
+<%flash[:errors].each do |error|%>
+<li>
+<%= error %>
+</li>
+<%end%>
+</ul>
+<%end%>
+
 <%= form_for @employee do |f| %>
 <%= f.label :first_name %>
 <%= f.text_field :first_name%>

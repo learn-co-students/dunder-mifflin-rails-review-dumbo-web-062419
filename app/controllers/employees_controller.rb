@@ -17,7 +17,12 @@ class EmployeesController < ApplicationController
 
   def create
     @employee= Employee.create(employee_params)
-    redirect_to @employee
+    if @employee.valid?
+      redirect_to @employee 
+    else 
+      flash[:errors]= @employee.errors.full_messages
+      redirect_to new_employee_path
+    end
   end
 
   def update
