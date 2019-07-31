@@ -1,0 +1,38 @@
+<h1>Show page for this dog</h1>
+
+<p>
+Name: <%= @dog.name %>
+</p>
+
+<p>
+Breed: <%= @dog.breed %>
+</p>
+
+<p>
+Age: <%= @dog.age %>
+</p>
+
+
+<h1>This Dog's Employees</h1>
+<% @employees.each do |e| %>
+  <% if e.dog_id == @dog.id %>
+    <p>
+      <%= e.first_name %>
+    </p>
+    <p>
+      <%= e.last_name %>
+    </p>
+    <p>
+      <%= e.alias %>
+    </p>
+    <p>
+      <%= e.title %>
+    </p>
+    <p>
+      <%= e.office %>
+    </p>
+    <p>
+      <%= e.img_url %>
+    </p>
+  <% end %>
+<% end %>

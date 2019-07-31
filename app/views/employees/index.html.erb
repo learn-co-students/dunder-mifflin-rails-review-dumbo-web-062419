@@ -1,0 +1,10 @@
+<h1>All the employees</h1>
+
+<%= button_to "Create a new employee", new_employee_path, method: :get %>
+
+<% @employees.each do |e| %>
+  <p>
+    <%= button_to "#{e.first_name} #{e.last_name} - #{e.alias}", employee_path(e), method: :get %>
+  </p>
+
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Information about this employee</h1>
+
+<%= button_to "Edit this employee", edit_employee_path(@employee), method: :get %>
+
+<p>
+  First name: <%= @employee.first_name %>
+</p>
+
+<p>
+  Last name: <%= @employee.last_name %>
+</p>
+
+<p>
+  Alias: <%= @employee.alias %>
+</p>
+
+<p>
+  Title: <%= @employee.title %>
+</p>
+
+<p>
+  Office: <%= @employee.office %>
+</p>
+
+<p>
+  Picture: <img src="<%= @employee.img_url %>" alt="Employee image">
+</p>
