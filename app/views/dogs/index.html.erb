@@ -1,0 +1,7 @@
+<h1>All the dogs here</h1>
+
+<% @dogs.each do |d| %>
+  <p>
+    <%= button_to "#{d.name}", dog_path(d), method: :get %>
+  </p>
+<% end %>
