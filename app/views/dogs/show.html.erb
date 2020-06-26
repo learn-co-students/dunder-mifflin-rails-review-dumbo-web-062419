@@ -1,0 +1,11 @@
+<h2>Show Page</h2>
+
+
+<h1><%= @dog.name %></h1>
+<%= link_to 'Edit', edit_dog_path(@dog) %>
+<p><b>Breed:</b> <%= @dog.breed %></p>
+<p><b>Age:</b> <%= @dog.age %></p>
+
+<% @dog.employees.each do |employees| %>
+<%= link_to employees.to_s, employees_path(employees) %>
+<% end %>
