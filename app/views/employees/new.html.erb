@@ -1,0 +1,33 @@
+<h1>Create a New Employee</h1>
+
+<% if flash[:errors] %>
+  <ul>
+    <% flash[:errors].each do |err_message| %>
+      <li>
+        <%= err_message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @employee do |f| %>
+
+  <%= f.label :first_name %>:
+  <%= f.text_area :first_name %><br>
+
+  <%= f.label :last_name %>:
+  <%= f.text_area :last_name %><br>
+
+  <%= f.label :alias %>:
+  <%= f.text_area :alias %><br>
+
+  <%= f.label :title %>:
+  <%= f.text_area :title %><br>
+
+  <%= f.label :office %>:
+  <%= f.text_area :office %><br>
+
+<%= f.collection_select :dog_id, Dog.all, :id, :name %>
+
+  <%= f.submit %>
+<% end %>

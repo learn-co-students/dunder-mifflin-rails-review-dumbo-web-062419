@@ -1,0 +1,15 @@
+<h1>Employee Show</h1>
+
+<img src="<%=@employee.img_url%>" alt="Employee">
+
+<p>
+  Name: <%= "#{ @employee.first_name } #{ @employee.last_name }" %>
+  <br>
+  Alias: <%= "#{ @employee.alias }" %>
+  <br>
+  Title: <%= "#{ @employee.title }" %>
+  <br>
+  Office: <%= "#{ @employee.office }" %>
+  <br>
+  Dog: <%= "#{ @employee.dog.name }" %>
+</p>
