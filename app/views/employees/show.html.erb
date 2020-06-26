@@ -1,0 +1,11 @@
+<h1>Viewing <%= @employee.first_name + " " + @employee.last_name %></h1>
+<p>
+  <%= link_to "Go back", employees_path %> |
+  <%= link_to "Edit #{@employee.first_name} #{@employee.last_name}", edit_employee_path(@employee) %>
+</p>
+<hr>
+<img src="<%= @employee.img_url %>" class="img-thumbnail" alt="<%= @employee.first_name %>">
+<p>Name: <%= @employee.first_name + " " + @employee.last_name %></p>
+<p>Alias: <%= @employee.alias %></p>
+<p>Office: <%= @employee.office %></p>
+<p>Dog: <%= @dog.name %></p>

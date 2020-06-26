@@ -1,0 +1,31 @@
+<h1>Editing <%= @employee.first_name + " " + @employee.last_name %></h1>
+
+<p>
+  <%= link_to "Cancel", employees_path %> |
+  <%= link_to "Delete", employee_path, method: :delete %>
+</p>
+
+<%= form_for @employee do |f| %>
+  <p><%= f.label :first_name %>
+    <%= f.text_field :first_name %></p>
+
+  <p><%= f.label :last_name %>
+    <%= f.text_field :last_name %></p>
+
+  <p><%= f.label :alias %>
+    <%= f.text_field :alias %></p>
+
+  <p><%= f.label :office %>
+    <%= f.text_field :office %></p>
+
+    <p><%= f.label :img_url %>
+    <%= f.text_field :img_url %></p>
+
+  <p>
+    <%= f.label :dog_id %>
+    <%= f.collection_select :dog_id, @dog, :id, :name %>
+  </p>
+
+
+  <p><%= f.submit %></p>
+<% end %>
