@@ -1,0 +1,9 @@
+<h1>Employees#index</h1>
+<%= link_to 'Create a new insance of Employee', new_employee_path %>
+<ul>
+<% @employees.each do |emp|%>
+<li>
+<%= link_to emp.first_name, emp%>
+</li>
+<%end %>
+</ul>
